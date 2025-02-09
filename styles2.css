@@ -21,6 +21,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
+
 }
 
 .nav-links li {
@@ -39,7 +40,30 @@ nav {
     color: #ff85b3;
 }
 
+/* General Navbar Styling */
+nav ul {
+    display: flex;
+    justify-content: center; /* Center-align the navbar links */
+    align-items: center; /* Vertically align links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Add space between links */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Separate brand and links */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Adjust Logout Button Alignment */
 .logout {
+    margin-left: auto; /* Push logout button to the right */
     background: #ff4c4c;
     color: white;
     border: none;
@@ -102,7 +126,7 @@ section {
     text-align: center;
     padding: 50px;
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    color: white;
+    color: black;
     font-family: 'Dancing Script', cursive;
     padding-top: 100px; /* Adjust this value based on your navbar height */
     margin-top: -50px; /* Negative margin to offset the extra space */
@@ -110,6 +134,7 @@ section {
 
 h1, h2 {
     font-size: 2.5em;
+    
 }
 
 h3 {
