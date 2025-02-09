@@ -78,7 +78,9 @@ section {
 h1, h2 {
     font-size: 2.5em;
 }
-
+.welcome{
+    margin-top: 100px;
+}
 html {
     scroll-behavior: smooth;
 }
