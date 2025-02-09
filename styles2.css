@@ -136,7 +136,10 @@ h1, h2 {
     font-size: 2.5em;
     
 }
-
+p{
+    font-family: 'Times New Roman', cursive;
+    color: black;
+}
 h3 {
     color: black;
 }
