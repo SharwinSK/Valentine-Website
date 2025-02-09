@@ -13,15 +13,26 @@
   </head>
 
   <body>
-    <!-- Navigation Bar -->
     <nav>
-      <ul>
-        <li><a id="nav-welcome" href="#welcome">Welcome</a></li>
-        <li><a id="nav-memories" href="#memory-gallery">Memories</a></li>
-        <li><a id="nav-quiz" href="#quiz">Kathal Quiz</a></li>
-        <li><a id="nav-secret" href="#secret-code">Ragasiyam Message</a></li>
-        <li><button class="logout-btn" onclick="logout()">Logout</button></li>
-      </ul>
+      <div class="nav-container">
+        <!-- Navbar Brand -->
+        <div class="brand">
+          <a href="#">My Valentine</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <!-- Navbar Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#memory-gallery">Memories</a></li>
+          <li><a href="#quiz">Kathal Quiz</a></li>
+          <li><a href="#secret-code">Ragasiyam Message</a></li>
+          <li><a href="#love-confession">Love Letter</a></li>
+          <li><button class="logout" onclick="logout()">Logout</button></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Welcome Section -->

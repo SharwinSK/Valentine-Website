@@ -294,3 +294,15 @@ document.addEventListener("scroll", () => {
     }
   });
 });
+// Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Logout Function
+function logout() {
+  window.location.href = "index.html"; // Redirect to the login page
+}
