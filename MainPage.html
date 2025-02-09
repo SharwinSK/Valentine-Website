@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine Bubu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a id="nav-welcome" href="#welcome">Welcome</a></li>
+        <li><a id="nav-memories" href="#memory-gallery">Memories</a></li>
+        <li><a id="nav-quiz" href="#quiz">Kathal Quiz</a></li>
+        <li><a id="nav-secret" href="#secret-code">Ragasiyam Message</a></li>
+        <li><button class="logout-btn" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+      <h1>Happy Valentine’s Day, My Gundhati ❤️</h1>
+      <p>
+        Before you go throught the website please watch the video, that I have
+        attact below
+      </p>
+      <div class="video-container">
+        <video width="560" height="315" controls autoplay loop>
+          <source src="music/perfect.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Memory Gallery Section -->
+    <section id="memory-gallery">
+      <h2>Nambe Rendu Perru irunthe nenuviggale 📸</h2>
+      <p>Here are some of our sweetest moments together.</p>
+
+      <div class="gallery">
+        <img src="images/photo2.jpg" onclick="openLightbox(this, 0)" />
+        <img src="images/photo8.jpg" onclick="openLightbox(this, 1)" />
+        <img src="images/photo3.jpg" onclick="openLightbox(this, 2)" />
+        <img src="images/photo6.jpg" onclick="openLightbox(this, 3)" />
+        <img src="images/photo5.jpg" onclick="openLightbox(this, 4)" />
+        <img src="images/photo4.jpg" onclick="openLightbox(this, 5)" />
+        <img src="images/photo7.jpg" onclick="openLightbox(this, 6)" />
+        <img src="images/photo8.jpg" onclick="openLightbox(this, 7)" />
+      </div>
+    </section>
+
+    <!-- Lightbox (Hidden by Default) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close-btn">&times;</span>
+      <img id="lightbox-img" />
+      <p id="lightbox-poem" class="poem"></p>
+      <!-- Poem Display -->
+    </div>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+      <h2>How Well Do You Know Me? 🤔</h2>
+      <p>
+        Answer these fun questions. Ippe teriyum enaye evolo puriji vechirukene,
+        and after done take screenshot and send me gundhati!
+      </p>
+
+      <div id="quiz-container">
+        <div id="question-container">
+          <h3 id="question-text">Loading...</h3>
+          <div id="answer-buttons" class="btn-container"></div>
+        </div>
+      </div>
+
+      <div id="quiz-result" style="display: none">
+        <h3 id="result-message"></h3>
+      </div>
+    </section>
+
+    <!-- Secret Love Code Section -->
+    <section id="secret-code">
+      <h2>Ragasiyam🔐</h2>
+      <p>Click the love icon and enter the code to unlock ❤️</p>
+
+      <div class="secret-container">
+        <button class="lock-icon" onclick="openCodeBox()">❤️</button>
+      </div>
+
+      <div id="code-box" class="code-box">
+        <p>Enter the Secret Code:</p>
+        <input type="password" id="love-code" maxlength="6" />
+        <button onclick="checkLoveCode()">Unlock</button>
+      </div>
+
+      <div id="secret-message" class="hidden-message">
+        <h3>💖 My Love, Gundhati 🥰 💖</h3>
+        <p>
+          Gundhati, Ungalukku Sonnadha Kaekaradhukku Munadi, En Heart-la Irunthu
+          Sollirunthe<br />
+          Indha Valentine's Day-ku naan oru gift um vaanga mudiyala. Sorry for
+          that. <br />
+          Aana naan edhuvum pannaama irukka mudiyadhu. Adhaan, indha website
+          create panna idea vandhuchu.<br />
+          Computer science padikiravan naan, en knowledge-a use panni indha
+          website create pannirukken, nee impress aagiriya illai nu enakku
+          theriyadhu.<br />
+          Aana naan sincerely panna work idhu. I know that you won't expect
+          anything.<br />
+          Aana, ella perukkum oru desire irukkum avegge manusule,
+          boyfriend/girlfriend edhuvum achi oru chinna gift kodupagala nu.<br />
+          Enakkum andha feeling irundhuchu, nee enakku edhuvum panne mattiya ne,
+          oru chinna surprise koduthaa, naan romba happy aayiruppen.<br />
+          Aana un family situation I know, financial difficulties ellam enakku
+          theriyum.<br />
+          Atleast nee un knowledge ah use panni oru chinna surprise pannunaalum,
+          adhu enakku periya happiness ah irukkum.<br />
+          I did not want to talk to much because, whatever I say you wont
+          understand.<br />
+          So, as a daddy, naan indha Valentine's Day-ku indha website design
+          panni koduthirukken.<br />
+          Unakku idhu pidikkum nu nambi idhai design pannirukken. Happy
+          Valentine’s Day, Gundhati! ❤️
+        </p>
+        <button onclick="closeSecretMessage()">Close</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

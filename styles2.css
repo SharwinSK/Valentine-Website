@@ -1,0 +1,307 @@
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff4c4c;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+    background: #ff758c; 
+    color: white; 
+    padding: 8px 12px; 
+    border-radius: 20px; 
+    transition: all 0.3s ease; 
+}
+
+/* Hover Effect for All Navbar Links */
+nav ul li a:hover {
+    background: rgba(255, 117, 140, 0.2); /* Soft hover background */
+    border-radius: 20px; /* Consistent with active */
+    color: #ff758c; /* Slightly different hover text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+/* Logout Button */
+.logout-btn {
+    margin-left: auto; /* Push it to the far right */
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff758c;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 100px; /* Adjust this value based on your navbar height */
+    margin-top: -50px; /* Negative margin to offset the extra space */
+}
+
+h1, h2 {
+    font-size: 2.5em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 15px; 
+    border: 5px solid white; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 70%;
+    border-radius: 15px;
+    border: 6px solid white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.poem {
+    color: white;
+    font-size: 18px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top: 15px;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative; 
+    bottom: 0; 
+}
+p{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+   
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff85b3;
+}
+/* Quiz Section */
+#quiz-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Question Text */
+#question-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Answer Buttons */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-container button {
+    padding: 10px;
+    font-size: 16px;
+    background: white;
+    border: 2px solid #ff4c4c;
+    color: #ff4c4c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-container button:hover {
+    background: #ff4c4c;
+    color: white;
+}
+
+/* Result Message */
+#quiz-result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+/* Secret Love Code Section */
+.secret-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Lock Icon Button */
+.lock-icon {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Hidden Input Box */
+.code-box {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Input Field */
+.code-box input {
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #ff4c4c;
+}
+
+/* Unlock Button */
+.code-box button {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-left: 10px;
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Hidden Message (Used for both Secret Love Code & Love Confession) */
+.hidden-message {
+    display: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+
+/* Close Button */
+.hidden-message button {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-container iframe,
+.video-container video {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
