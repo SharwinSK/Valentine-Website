@@ -127,7 +127,7 @@ section {
     padding: 50px;
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
     color: black;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Times New Roman', cursive;
     padding-top: 100px; /* Adjust this value based on your navbar height */
     margin-top: -50px; /* Negative margin to offset the extra space */
 }
