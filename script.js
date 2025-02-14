@@ -150,24 +150,21 @@ function loadQuestion() {
   });
 }
 
-function checkAnswer(button, correctAnswer) {
-  const selectedAnswer = button.textContent;
-
-  if (selectedAnswer === correctAnswer) {
-    button.classList.add("btn-success"); // Green for correct answer
-    setTimeout(nextQuestion, 1000); // Move to next question after 1 second
-  } else {
-    button.classList.add("btn-danger"); // Red for wrong answer
-
-    // Highlight the correct answer in green
-    Array.from(answerButtons.children).forEach((btn) => {
-      if (btn.textContent === correctAnswer) {
-        btn.classList.add("btn-success");
-      }
-    });
-
-    setTimeout(nextQuestion, 1500); // Move to next question after 1.5 seconds
+// Check Answer and Auto-Advance
+function checkAnswer(selectedIndex) {
+  if (selectedIndex === shuffledQuestions[currentQuestionIndex].correct) {
+    score++;
   }
+
+  // Move to the next question after 0.5 seconds
+  setTimeout(() => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < shuffledQuestions.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  }, 500);
 }
 
 // Show Result
